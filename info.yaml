@@ -11,6 +11,7 @@ project:
 #
 # This info will be automatically collected and used to make a datasheet for the chip.
 documentation:
+  author:       null
   title:        "4-bit Collatz"      # Project title
   description:  "compute the nth Collatz number"      # Short description of what your project does
   how_it_works: "uses bit-level logic"      # Longer description of how the project works

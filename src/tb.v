@@ -19,6 +19,6 @@ module tb (
         #1;
     end
 
-    collatz inst collatz ( n, out );
+    collatz inst ( n, out );
 
 endmodule
