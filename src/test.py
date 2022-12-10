@@ -2,7 +2,8 @@ import cocotb
 from cocotb.triggers import ClockCycles
 
 
-numbers = list(range(2**3))
+BIT_LENGTH = 4
+numbers = list(range(2**BIT_LENGTH))
 
 
 def collatz(n):
@@ -11,6 +12,9 @@ def collatz(n):
 
 @cocotb.test()
 async def test_collatz(dut):
-    dut.n.value = 3
-    await ClockCycles(dut.clk, 1)
-    assert int(dut.out.value) == collatz(3)
+    for n in numbers:
+        dut.n.value = n
+        c = collatz(n)
+        if c < 2**BIT_LENGTH:
+            await ClockCycles(dut.clk, 1)
+            assert int(dut.out.value) == c

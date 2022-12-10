@@ -8,7 +8,7 @@ that can be driven / tested by the cocotb test.py
 
 module tb (
     // testbench is controlled by test.py
-    input n,
+    input [3:0] n,
     output [3:0] out
    );
 
