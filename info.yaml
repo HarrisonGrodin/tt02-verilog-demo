@@ -25,19 +25,19 @@ documentation:
   clock_hz:     1000       # Clock frequency in Hz (if required)
   picture:      ""      # relative path to a picture in your repository
   inputs:               # a description of what the inputs do
-    - n 0
-    - n 1
-    - n 2
-    - n 3
+    - n[0]
+    - n[1]
+    - n[2]
+    - n[3]
     - none
     - none
     - none
     - none
   outputs:
-    - collatz 0
-    - collatz 1
-    - collatz 2
-    - collatz 3
+    - collatz[0]
+    - collatz[1]
+    - collatz[2]
+    - collatz[3]
     - none
     - none
     - none
