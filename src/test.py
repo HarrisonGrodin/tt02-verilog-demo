@@ -1,25 +1,16 @@
 import cocotb
-from cocotb.clock import Clock
-from cocotb.triggers import RisingEdge, FallingEdge, Timer, ClockCycles
+from cocotb.triggers import ClockCycles
 
 
 numbers = list(range(2**3))
 
 
+def collatz(n):
+    return n / 2 if n % 2 == 0 else 3 * n + 1
+
+
 @cocotb.test()
 async def test_collatz(dut):
-    assert True
-    # dut._log.info("start")
-    # clock = Clock(dut.clk, 10, units="us")
-    # cocotb.start_soon(clock.start())
-
-    # dut._log.info("reset")
-    # dut.rst.value = 1
-    # await ClockCycles(dut.clk, 10)
-    # dut.rst.value = 0
-
-    # dut._log.info("check all segments")
-    # for i in range(10):
-    #     dut._log.info("check segment {}".format(i))
-    #     await ClockCycles(dut.clk, 100)
-    #     assert int(dut.segments.value) == segments[i]
+    dut.n.value = 3
+    await ClockCycles(dut.clk, 1)
+    assert int(dut.out.value) == collatz(3)
