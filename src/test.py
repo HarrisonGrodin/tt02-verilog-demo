@@ -1,5 +1,4 @@
 import cocotb
-from cocotb.triggers import ClockCycles
 
 
 BIT_LENGTH = 4
@@ -16,5 +15,4 @@ async def test_collatz(dut):
         dut.n.value = n
         c = collatz(n)
         if c < 2**BIT_LENGTH:
-            await ClockCycles(dut.clk, 1)
             assert int(dut.out.value) == c
