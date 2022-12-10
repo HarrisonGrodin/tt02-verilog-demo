@@ -9,14 +9,34 @@ project:
 # As everyone will have access to all designs, try to make it easy for someone new to your design to know what
 # it does and how to operate it.
 #
+# Here is an example: https://github.com/mattvenn/tinytapeout_m_segments/blob/main/info.yaml
+#
 # This info will be automatically collected and used to make a datasheet for the chip.
 documentation:
-  author:       null
+  author:       "Anonymous"      # Your name
   title:        "4-bit Collatz"      # Project title
   description:  "compute the nth Collatz number"      # Short description of what your project does
   how_it_works: "uses bit-level logic"      # Longer description of how the project works
+  how_to_test:  "feed in a number n, expect the nth Collatz number"      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
+  external_hw:  ""      # Describe any external hardware needed
   language:     "verilog" # other examples include Verilog, Amaranth, VHDL, etc
+  doc_link:     ""      # URL to longer form documentation, eg the README.md in your repository
+  picture:      ""      # relative path to a picture in your repository
   inputs:               # a description of what the inputs do
     - n
+    - none
+    - none
+    - none
+    - none
+    - none
+    - none
+    - none
   outputs:
     - collatz_n
+    - none
+    - none
+    - none
+    - none
+    - none
+    - none
+    - none
