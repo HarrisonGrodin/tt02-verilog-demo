@@ -13,7 +13,7 @@ project:
 #
 # This info will be automatically collected and used to make a datasheet for the chip.
 documentation:
-  author:       ""      # Your name
+  author:       "Anonymous"      # Your name
   discord:      ""
   title:        "4-bit Collatz"      # Project title
   description:  "compute the nth Collatz number"      # Short description of what your project does
