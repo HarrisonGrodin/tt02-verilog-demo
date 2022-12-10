@@ -23,19 +23,19 @@ documentation:
   doc_link:     ""      # URL to longer form documentation, eg the README.md in your repository
   picture:      ""      # relative path to a picture in your repository
   inputs:               # a description of what the inputs do
-    - n
-    - none
-    - none
-    - none
+    - n 0
+    - n 1
+    - n 2
+    - n 3
     - none
     - none
     - none
     - none
   outputs:
-    - collatz_n
-    - none
-    - none
-    - none
+    - collatz 0
+    - collatz 1
+    - collatz 2
+    - collatz 3
     - none
     - none
     - none
